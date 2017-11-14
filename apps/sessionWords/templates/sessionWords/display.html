@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display Form</title>
+</head>
+<body>
+<!-- <p style="color:{{request.session.color}}; font-weight:{{request.session.fontSize}}"></style>{{request.session.word}}</p> -->
+{% if request.session.count %}
+                {% for count in request.session.count %}
+                <p><span style="color:{{ count.color }}" class="{{ count.fontStyle }}">{{count.word}}</span></p>
+                {% endfor %}
+            {% endif %}
+
+</body>
+</html>
